@@ -16,6 +16,6 @@ class Nullaosta < Formula
   test do
     assert_match version.to_s, shell_output("#{bin}/nullaosta --version")
     system bin/"nullaosta", "init"
-    assert_predicate testpath/"policy.json", :exist?
+    assert_path_exists testpath/"policy.json"
   end
 end
